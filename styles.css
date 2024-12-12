@@ -1,0 +1,120 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6f7bff, #60c5d3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Weather container */
+.weather-container {
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    width: 350px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-container:hover {
+    transform: translateY(-10px);
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Search bar styles */
+.search-container {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1.1em;
+    width: 70%;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #60c5d3;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Weather information container */
+.weather-info {
+    margin-top: 20px;
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.weather-info p {
+    margin: 8px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Error handling */
+#error {
+    color: red;
+    font-size: 1.2em;
+}
+
+/* Responsive design */
+@media screen and (max-width: 400px) {
+    .weather-container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    input, button {
+        font-size: 1em;
+    }
+}
